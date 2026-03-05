@@ -12,17 +12,15 @@ This course explores the intersection of software development and IT operations.
 
 ## 🛠️ Technologies & Tools
 *(Note: Update this list based on the specific tools covered in your lectures)*
-* **Virtualization/Containers:** Docker, Vagrant, VirtualBox, VMware
-* **Configuration Management:** Ansible, Puppet, Chef, Terraform
-* **Version Control:** Git & GitHub/GitLab
-* **Operating Systems:** Linux (Ubuntu/CentOS/RHEL)
+* **Virtualization/Containers:** Docker
+* **Configuration Management:** Docker Compose, YAML
+* **Version Control:** Git/GitHub, Docker Hub
+* **Operating Systems:** Linux (WSL)
 
 ## 📁 Repository Structure
 
 ```text
 INT332-DevOps/
-├── Assignments/       # Homework, written assignments, and graded tasks
-├── Labs/              # Hands-on lab exercises, Dockerfiles, and playbooks
-├── Notes/             # Lecture notes, cheat sheets, and reference materials
-├── Projects/          # Larger course projects and infrastructure code
+├── Materials/         # PPTs, Instructions, and Notes
+├── Labs/              # Hands-on lab exercises, Dockerfiles, and class tasks
 └── README.md          # Course overview and setup instructions
