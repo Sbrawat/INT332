@@ -22,5 +22,5 @@ This course explores the intersection of software development and IT operations.
 ```text
 INT332-DevOps/
 ├── Materials/         # PPTs, Instructions, and Notes
-├── Labs/              # Hands-on lab exercises, Dockerfiles, and class tasks
+├── Practicals/              # Hands-on lab exercises, Dockerfiles, and class tasks
 └── README.md          # Course overview and setup instructions
