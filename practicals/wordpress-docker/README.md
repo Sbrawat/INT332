@@ -5,6 +5,13 @@
 2. WordPress Container -> MySQL Connection
 3. MySQL Container -> Database Storage (Volume)
 
+```mermaid
+graph TD
+    User[("🌐 User Browser")] -->|Accesses localhost:8082| WP
+    WP[("🏢 WordPress Container")] -->|Connects via 'db'| DB
+    DB[("🗄️ MySQL Container")] -->|Saves data| Vol[("💾 Database Volume")]
+```
+
 ## Create Project Directory​
 ```console
 mkdir wordpress docker
