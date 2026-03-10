@@ -19,29 +19,28 @@ services:
     container_name: wordpress_app
     restart: always
     ports:
-      -"8082:80"
+      - "8082:80"
     environment:
-    WORDPRESS_DB_HOST: db
-    WORDPRESS_DB_USER: wpuser
-    ​WORDPRESS_DB_PASSWORD: wppassword
-    WORDPRESS_DB_NAME: wpdatabase
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppassword
+      WORDPRESS_DB_NAME: wpdatabase
     volumes:
-      -wordpress_data:/var/www/html
+      - wordpress_data:/var/www/html
     depends_on:
-      -db
+      - db
 
   db:
-    image: mysql:5. 7
+    image: mysql:5.7
     container_name: wordpress_db
     restart: always
     environment:
-    MYSQL_DATABASE: wpdatabase
-    MYSQL_USER: wpuser
-    MYSQL_PASSWORD: wppassword
-    MYSQL_ROOT_PASSWORD: rootpassword
-
+      MYSQL_DATABASE: wpdatabase
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wppassword
+      MYSQL_ROOT_PASSWORD: rootpassword
     volumes:
-      -db_data:/var/lib/mysql
+      - db_data:/var/lib/mysql
 
 volumes: 
   wordpress_data:
