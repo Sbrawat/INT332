@@ -24,3 +24,4 @@ INT332-DevOps/
 ├── Materials/         # PPTs, Instructions, and Notes
 ├── Practicals/              # Hands-on lab exercises, Dockerfiles, and class tasks
 └── README.md          # Course overview and setup instructions
+```
