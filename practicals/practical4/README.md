@@ -21,7 +21,7 @@ node-mongo-compose/
 <details>
   <summary>Screenshot of the my system</summary>
   
-![Screenshot](image.png)
+![Screenshot](screenshots/image.png)
 </details>
 
 ### File name : server.js
@@ -49,7 +49,7 @@ app.listen(PORT, () => {
 <details>
   <summary>Screenshot of the my system</summary>
 
-![Screenshot](image-1.png)
+![Screenshot](screenshots/image-1.png)
 
 </details>
 
@@ -70,7 +70,7 @@ app.listen(PORT, () => {
 <details>
   <summary>Screenshot of the my system</summary>
 
-![Screenshot](image-2.png)
+![Screenshot](screenshots/image-2.png)
 
 </details>
 
@@ -89,7 +89,7 @@ CMD ["node", "server.js"]
 <details>
   <summary>Screenshot of the my system</summary>
 
-![Screenshot](image-3.png)
+![Screenshot](screenshots/image-3.png)
 
 </details>
 
@@ -122,7 +122,7 @@ volumes:
 <details>
   <summary>Screenshot of the my system</summary>
 
-![Screenshot](image-4.png)
+![Screenshot](screenshots/image-4.png)
 
 </details>
 
@@ -135,8 +135,7 @@ volumes:
 <details>
   <summary>Screenshot of the my system</summary>
 
-![Screenshot](image-5.png)
-![Screenshot1](image-6.png)
+![Screenshot1](screenshots/image-6.png)
 
 </details>
 
@@ -147,7 +146,7 @@ volumes:
 <details>
   <summary>Screenshot of the my system</summary>
 
-![Screenshot](image-7.png)
+![Screenshot](screenshots/image-7.png)
 
 </details>
 
@@ -160,6 +159,6 @@ volumes:
 <details>
   <summary>Screenshot of the my system</summary>
 
-![alt text](image-5.png)
+![alt text](screenshots/image-5.png)
 
 </details>
