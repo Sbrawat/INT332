@@ -1,11 +1,14 @@
 # Practical no. 4 : Deploy Node.js + MongoDB Application using Docker Compose
 
 ## Objective
-* To understand multi-container applications using Docker Compose.
-* To deploy a Node.js web application connected with MongoDB database.
+
+- To understand multi-container applications using Docker Compose.
+- To deploy a Node.js web application connected with MongoDB database.
 
 ## Project Structure
+
 ### Create the following folder structure:
+
 ```text
 node-mongo-compose/
 │
@@ -15,40 +18,64 @@ node-mongo-compose/
 └── Dockerfile
 ```
 
-### file name : server.js
+<details>
+  <summary>Screenshot of the my system</summary>
+  
+![Screenshot](image.png)
+</details>
+
+### File name : server.js
+
 ```js
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const PORT = 3000;
-mongoose.connect("mongodb://mongo:27017/mydatabase", {
- useNewUrlParser: true,
- useUnifiedTopology: true
-})
-.then(() => console.log("MongoDB Connected"))
-.catch(err => console.log(err));
+mongoose
+  .connect("mongodb://mongo:27017/mydatabase", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log(err));
 app.get("/", (req, res) => {
- res.send("Node.js + MongoDB running with Docker Compose");
+  res.send("Node.js + MongoDB running with Docker Compose");
 });
 app.listen(PORT, () => {
- console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 ```
 
+<details>
+  <summary>Screenshot of the my system</summary>
+
+![Screenshot](image-1.png)
+
+</details>
+
 ### File name : package.json
+
 ```json
 {
- "name": "node-mongo-app",
- "version": "1.0.0",
- "main": "server.js",
- "dependencies": {
- "express": "^4.18.2",
- "mongoose": "^7.0.0"
- }
+  "name": "node-mongo-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
+  }
 }
 ```
 
+<details>
+  <summary>Screenshot of the my system</summary>
+
+![Screenshot](image-2.png)
+
+</details>
+
 ### Dockerfile (for Node.js App)
+
 ```Dockerfile
 FROM node:18
 WORKDIR /app
@@ -59,7 +86,15 @@ EXPOSE 3000
 CMD ["node", "server.js"]
 ```
 
+<details>
+  <summary>Screenshot of the my system</summary>
+
+![Screenshot](image-3.png)
+
+</details>
+
 ### Docker Compose File
+
 ```YAML
 docker-compose.yml
 version: '3.8'
@@ -84,15 +119,47 @@ volumes:
  mongo_data:
 ```
 
+<details>
+  <summary>Screenshot of the my system</summary>
+
+![Screenshot](image-4.png)
+
+</details>
+
 ## Steps to Run the Application
+
 ### Step : Start containers
-```
-docker compose up –-build
-```
+
+    docker compose up –-build
+
+<details>
+  <summary>Screenshot of the my system</summary>
+
+![Screenshot](image-5.png)
+![Screenshot1](image-6.png)
+
+</details>
+
 ### Step : Verify running containers
-```
-docker ps
-```
+
+    docker ps
+
+<details>
+  <summary>Screenshot of the my system</summary>
+
+![Screenshot](image-7.png)
+
+</details>
 
 ## Test the Application
-* Open browser: http://localhost:3000
+
+### Open browser:
+
+    http://localhost:3000
+
+<details>
+  <summary>Screenshot of the my system</summary>
+
+![alt text](image-5.png)
+
+</details>
