@@ -1,0 +1,9 @@
+version: "3"
+services:
+  web:
+    image: httpd
+    container_name: apache_server
+    ports:
+      - "8081:80"
+    volumes:
+      - ./website:/usr/local/apache2/htdocs
